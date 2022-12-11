@@ -14,9 +14,9 @@ private class Solution10(input: List<String>) {
         return acc
     }
 
-    fun solvePart1() = listOf(20, 60, 100, 140, 180, 220).sumOf { it * states[it - 1] }
+    fun part1() = listOf(20, 60, 100, 140, 180, 220).sumOf { it * states[it - 1] }
 
-    fun solvePart2() = (0..5).map { y -> (0..40).map { x -> getPixel(x, y) }.joinToString("") }
+    fun part2() = (0..5).map { y -> (0..40).map { x -> getPixel(x, y) }.joinToString("") }
 
     private fun getPixel(x: Int, y: Int): Char {
         val sprite = (states[y * 40 + x]..states[y * 40 + x] + 2)
@@ -27,9 +27,9 @@ private class Solution10(input: List<String>) {
 
 fun main() {
     val testSolution = Solution10(readInput("Day10_test"))
-    check(testSolution.solvePart1() == 13140)
+    check(testSolution.part1() == 13140)
     check(
-        testSolution.solvePart2() == listOf(
+        testSolution.part2() == listOf(
             "##  ##  ##  ##  ##  ##  ##  ##  ##  ##   ",
             "###   ###   ###   ###   ###   ###   ###  ",
             "####    ####    ####    ####    ####     ",
@@ -40,6 +40,6 @@ fun main() {
     )
 
     val solution = Solution10(readInput("Day10"))
-    println(solution.solvePart1())
-    println(solution.solvePart2().joinToString("\n"))
+    println(solution.part1())
+    println(solution.part2().joinToString("\n"))
 }
