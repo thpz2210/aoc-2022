@@ -1,4 +1,4 @@
-private open class Solution12(input: List<String>) {
+private class Solution12(input: List<String>) {
 
     var grid = Grid2D(input.map { it.toCharArray().toList() })
 

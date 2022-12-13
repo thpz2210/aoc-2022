@@ -1,3 +1,7 @@
+dependencies {
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
+}
+
 plugins {
     kotlin("jvm") version "1.7.22"
 }
