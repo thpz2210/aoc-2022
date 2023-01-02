@@ -39,6 +39,14 @@ data class Coordinate(val x: Int = 0, val y: Int = 0) {
 
 
 /**
+ * Holds a 2 dimensional coordinate with mutable entries
+ */
+data class MutableCoordinate(var x: Int, var y: Int) {
+    override fun toString() ="(x=$x, y=$y)"
+}
+
+
+/**
  * Returns the cartesian product of the given IntRanges
  */
 fun IntRange.cartesianProduct(other: IntRange): List<Coordinate> = this.flatMap { s ->
